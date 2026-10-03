@@ -9,6 +9,7 @@ const DEV_PORT = 5173;
 const PREVIEW_PORT = 4173;
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || '/',
   plugins: [
     react(),
     checker({

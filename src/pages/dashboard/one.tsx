@@ -1,6 +1,6 @@
 import './portfolio.css';
 
-import type { FormEvent } from 'react';
+import type { FormEvent, CSSProperties } from 'react';
 
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router';
@@ -151,14 +151,14 @@ const education = [
     school: 'The University of Texas at Austin',
     location: 'Austin, Texas',
     year: 'Jun 2021',
-    mark: '/assets/images/education/ut-austin-mark.svg',
+    mark: `${import.meta.env.BASE_URL}assets/images/education/ut-austin-mark.svg`,
   },
   {
     degree: 'BS Computer Science',
     school: 'Georgia Institute of Technology',
     location: 'Atlanta, Georgia',
     year: 'May 2017',
-    mark: '/assets/images/education/georgia-tech-mark.svg',
+    mark: `${import.meta.env.BASE_URL}assets/images/education/georgia-tech-mark.svg`,
   },
 ];
 
@@ -528,7 +528,7 @@ function IndustryIllustration({
 
   return (
     <img
-      src={`/assets/images/projects/${kind}.jpg`}
+      src={`${import.meta.env.BASE_URL}assets/images/projects/${kind}.jpg`}
       alt={descriptions[kind]}
       loading="lazy"
       decoding="async"
@@ -671,7 +671,14 @@ export default function Page() {
   };
 
   return (
-    <div className={`portfolio${isDark ? ' portfolio--dark' : ' portfolio--light'}`}>
+    <div
+      className={`portfolio${isDark ? ' portfolio--dark' : ' portfolio--light'}`}
+      style={
+        {
+          '--portfolio-contact-hero': `url("${import.meta.env.BASE_URL}assets/images/contact/hero.webp")`,
+        } as CSSProperties
+      }
+    >
       <div
         className="reading-progress"
         style={{ transform: `scaleX(${scrollProgress / 100})` }}
@@ -685,7 +692,7 @@ export default function Page() {
       <header className="site-header">
         <Logo
           className="site-logo"
-          href="/dashboard/overview"
+          href={`${import.meta.env.BASE_URL}dashboard/overview`}
           isSingle
           aria-label="David Heavern — overview"
         />

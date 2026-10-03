@@ -1472,7 +1472,7 @@ html {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   overflow: hidden;
-  background: #18232d url('/assets/images/contact/hero.webp') center 54% / cover no-repeat;
+  background: #18232d var(--portfolio-contact-hero) center 54% / cover no-repeat;
   color: #fff;
 }
 
