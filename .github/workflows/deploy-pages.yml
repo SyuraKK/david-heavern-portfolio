@@ -32,7 +32,24 @@ jobs:
         env:
           VITE_BASE_PATH: /david-heavern-portfolio/
       - name: Add SPA fallback
-        run: cp dist/index.html dist/404.html
+        run: |
+          cp dist/index.html dist/404.html
+          routes=(
+            dashboard/overview
+            dashboard/experience
+            dashboard/expertise
+            dashboard/contact
+            dashboard/education
+            dashboard/projects/real-time-transaction-monitoring
+            dashboard/projects/digital-payments-services
+            dashboard/projects/risk-insights-dashboard
+            dashboard/projects/care-coordination-portal
+            dashboard/projects/clinical-data-exchange
+          )
+          for route in "${routes[@]}"; do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
