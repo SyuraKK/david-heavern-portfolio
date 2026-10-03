@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 220" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="56" y1="12" x2="425" y2="210" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152E49"/>
+      <stop offset="1" stop-color="#222044"/>
+    </linearGradient>
+    <linearGradient id="node" x1="153" y1="51" x2="328" y2="168" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#71E1DB"/>
+      <stop offset=".53" stop-color="#70B4FC"/>
+      <stop offset="1" stop-color="#B889FF"/>
+    </linearGradient>
+    <filter id="glow" x="106" y="24" width="269" height="183" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="480" height="220" rx="18" fill="url(#bg)"/>
+  <circle cx="408" cy="2" r="99" fill="#71B4FC" opacity=".09"/>
+  <circle cx="46" cy="222" r="112" fill="#71E1DB" opacity=".08"/>
+  <g stroke="url(#node)" stroke-opacity=".57" stroke-width="2">
+    <path d="m240 107-93-43m93 43 91-43m-91 43-75 61m75-61 77 61m-77-61v-69"/>
+    <path d="m147 64-47 24m47-24 4 72m180-72 49 24m-49-24-2 72m-163 33-63 10m63-10 33 38m144-38 63 10m-63-10-32 38"/>
+  </g>
+  <g filter="url(#glow)" opacity=".56">
+    <circle cx="240" cy="107" r="21" fill="#68E5DF"/>
+  </g>
+  <g fill="#17263B" stroke="url(#node)" stroke-width="2">
+    <rect x="215" y="77" width="50" height="50" rx="15"/>
+    <rect x="127" y="46" width="40" height="36" rx="12"/>
+    <rect x="313" y="46" width="40" height="36" rx="12"/>
+    <rect x="148" y="149" width="43" height="37" rx="12"/>
+    <rect x="289" y="149" width="43" height="37" rx="12"/>
+    <rect x="220" y="20" width="40" height="36" rx="12"/>
+    <rect x="80" y="79" width="40" height="36" rx="12"/>
+    <rect x="360" y="79" width="40" height="36" rx="12"/>
+  </g>
+  <g fill="#DDFBFF">
+    <circle cx="147" cy="64" r="3"/><circle cx="333" cy="64" r="3"/>
+    <circle cx="240" cy="38" r="3"/><circle cx="100" cy="97" r="3"/>
+    <circle cx="380" cy="97" r="3"/><circle cx="169" cy="167" r="3"/>
+    <circle cx="310" cy="167" r="3"/>
+  </g>
+  <circle cx="240" cy="102" r="4" fill="#DDFBFF"/>
+  <circle cx="240" cy="114" r="4" fill="#DDFBFF"/>
+</svg>
